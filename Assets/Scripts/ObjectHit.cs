@@ -5,6 +5,10 @@ using UnityEngine;
 public class ObjectHit : MonoBehaviour
 {
     private void OnCollisionEnter(Collision other) {
-        GetComponent<MeshRenderer>().material.color = Color.cyan;
+        if(other.gameObject.tag == "Player") {
+            GetComponent<MeshRenderer>().material.color = Color.cyan;
+            // gameObject refers to the object the script is attached to
+            gameObject.tag = "Hit";
+        }
     }
 }

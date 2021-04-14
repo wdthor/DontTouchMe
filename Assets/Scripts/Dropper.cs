@@ -14,7 +14,7 @@ public class Dropper : MonoBehaviour
         rendering = GetComponent<MeshRenderer>();
         gravity = GetComponent<Rigidbody>();
         gravity.useGravity = false;
-        rendering.enabled = false;
+        // rendering.enabled = false;
     }
 
     // Update is called once per frame
